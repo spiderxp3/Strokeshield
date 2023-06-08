@@ -2,6 +2,8 @@
 
 StrokeShield is a web application that uses machine learning to predict the risk of heart strokes. The application is built on a Python server and utilizes the RandomForestClassifier algorithm to provide personalized risk assessments based on user input health data.
 
+Check out live demo of the project in the description.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.8-blue)](https://www.python.org/downloads/release/python-380/)
 [![Flask Version](https://img.shields.io/badge/flask-2.0.1-blue)](https://pypi/project/Flask/)
@@ -20,7 +22,6 @@ StrokeShield is a web application that uses machine learning to predict the risk
 - After preprocessing the data and training the model, StrokeShield achieved an accuracy of 94% on the test set.
 - This high accuracy demonstrates the effectiveness of the RandomForestClassifier algorithm in predicting stroke risk based on individual risk factors.
 
-#
 ## Features
 
 - User-friendly interface for inputting health data
