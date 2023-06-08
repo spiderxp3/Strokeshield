@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heart Stroke Prediction Web App</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+	<div class="main grad-bg">
+		<div>
+			<span class="main-header">HEART STROKE PREDICTION</span><br><br>
+			<div class="description">
+				A stroke occurs when the blood supply to part of your brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients. Brain cells begin to die in minutes.
+			</div>
+			<br><br>
+			<div class="strong-text">
+				<b>Know your chances of heart stroke with the help of AI/ML by answering few questions!</b>
+			</div>
+			<br><br>
+			<a href="/collect_data">
+				<button class="default-btn">CHECK FOR YOURSELF</button>
+			</a>
+		</div>
+		<div>
+			<img src="{{url_for('static',filename='doctor.png')}}" width="600px" height="600px" />
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data Collection - Heart Stroke Prediction</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='custom_select_box.css')}}">
+</head>
+<body>
+	<div class="navbar-heading">
+		<span class="custom-link" onclick="window.location='/'" title="go back to home page">HEART STROKE PREDICTION</span>
+	</div>
+	<div class="main-container">
+		<div class="form-box">
+			<span class="strong-text">STEP <span id="step-number">1</span> of 2</span><br>
+			<form method="POST" action="/result">
+				<div id="frame-1" class="frame"><br><br>
+					<span>What is your gender?</span><br><br>
+					<div class="custom-select">
+						<select id="user-gender" name="gender">
+	                        <option selected>-- Select Gender --</option>
+	                        <option value="Male">Male</option>
+	                        <option value="Female">Female</option>
+	                        <option value="Other">Other</option>
+	                    </select>
+                	</div><br><br>
+                	<span>What is your age?</span><br><br>
+                	<input type="number" name="age" placeholder="Your Age" /><br><br>
+                	<span>Do you have Hypertension?</span><br><br>
+                	<div class="custom-select">
+						<select id="user-tension" name="hypertension">
+	                        <option selected>-- Select Hypertension --</option>
+	                        <option value="1">Yes</option>
+	                        <option value="0">No</option>
+	                    </select>
+                	</div><br><br><br><br>
+                	<span class="default-btn" onclick="showFrame2()">NEXT</button>
+				</div>
+				<div id="frame-2" class="frame"><br><br>
+					<span>Do you have any heart disease?</span><br><br>
+					<div class="custom-select">
+						<select id="user-heart" name="heart_disease">
+	                        <option selected>-- Heart Disease --</option>
+	                        <option value="1">Yes</option>
+	                        <option value="0">No</option>
+	                    </select>
+                	</div><br><br>
+                	<span>What is your average glucose level?</span><br><br>
+                	<input type="number" name="avg_glucose_level" placeholder="Your Glucose Level (in mg/dL)" /><br><br>
+                	<span>Do you smoke?</span><br><br>
+                	<div class="custom-select">
+						<select id="user-smoke" name="smoking_status">
+	                        <option selected>-- Smoking Status --</option>
+	                        <option value="never smoked">never smoked</option>
+	                        <option value="formerly smoked">formerly smoked</option>
+	                        <option value="smokes">smokes</option>
+	                    </select>
+                	</div><br><br><br><br>
+                	<span class="default-btn" onclick="showFrame1()">PREVIOUS</span>
+                	<button class="default-btn strong-text" type="submit">PREDICT</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="{{url_for('static', filename='data_collect.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='custom_select_box.js')}}"></script>
+</body>
+</html>

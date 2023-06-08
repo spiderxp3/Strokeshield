@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prediction Result</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+<div class="navbar-heading">
+	<span class="custom-link" onclick="window.location='/'" title="go back to home page">HEART STROKE PREDICTION</span>
+</div>
+<div class="main-container">
+	<div class="form-box" style="width:80%">
+		<div class="main-header">YOUR PREDICTION RESULT - </div>
+		<br><br><br><br>
+		<div id="prediction-result" style="">{}</div><br><br><br>
+		<p id="result-description">{}</p><br><br><br>
+		<div style="text-align: center;">
+			<a href="/"><button class="default-btn">Go Back to Home</button></a>
+			<a href="/collect_data"><button class="default-btn">Test Again</button></a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	let heartStrokeRisk = {{prediction_text}};
+	let e1 = document.getElementById("prediction-result");
+	let e2 = document.getElementById("result-description");
+
+	if(heartStrokeRisk==1){
+		e1.style.color = '#A60300'
+		e1.innerHTML = "You have a very HIGH risk of heart stroke!";
+		e2.innerHTML = "You should immediately talk to your doctor about your risk factors for heart stroke as soon as possible. They can provide personalized advice and recommendations to help you manage your risk."
+	} else {
+		e1.style.color = '#057327'
+		e1.innerHTML = "You have a very LOW risk of heart stroke! :)";
+		e2.innerHTML = "Keep up the good work! It's great that you're taking care of your health and reducing your risk of heart stroke. Make sure to maintain a healthy lifestyle. Eating a balanced diet, exercising regularly, and avoiding smoking can all help keep your heart healthy.";
+	}
+
+</script>
+</body>
+</html>
